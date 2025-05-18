@@ -80,11 +80,11 @@ const CreatePodcast = () => {
         if (!imageUrl) missing.push('image');
         if (!voiceType) missing.push('voice type');
         
-        toast({
-          title: 'Missing required fields',
-          description: `Please generate ${missing.join(' and ')}`,
-          variant: 'destructive'
-        })
+        // toast({
+        //   title: 'Missing required fields',
+        //   description: `Please generate ${missing.join(' and ')}`,
+        //   variant: 'destructive'
+        // })
         setIsSubmitting(false);
         throw new Error(`Missing required fields: ${missing.join(', ')}`)
       }
@@ -107,10 +107,10 @@ const CreatePodcast = () => {
       router.push('/')
     } catch (error) {
       console.log(error);
-      toast({
-        title: 'Error',
-        variant: 'destructive',
-      })
+      // toast({
+      //   title: 'Error',
+      //   variant: 'destructive',
+      // })
       setIsSubmitting(false);
     }
   }

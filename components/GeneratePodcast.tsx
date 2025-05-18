@@ -10,9 +10,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { useToast } from "@/components/ui/use-toast"
 import { useUploadFiles } from '@xixixao/uploadstuff/react';
 
-// NOTE: This component now uses the local TTS server instead of OpenAI.
-// See TTSPlayer.tsx for the new implementation.
-
 const useGeneratePodcast = ({
   setAudio, voiceType, voicePrompt, setAudioStorageId, setAudioDuration
 }: GeneratePodcastProps) => {
